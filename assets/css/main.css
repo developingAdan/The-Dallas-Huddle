@@ -559,8 +559,16 @@ section {
 }
 
 .cowboys-section-hero-img {
-  /* border: 2px solid green; */
+  border: 2px solid green;
 
+}
+
+.cowboys-section-hero-img img {
+  border: 2px solid palevioletred;
+}
+
+.recents-head-container {
+  border: 2px solid blue;
 }
 
 .trending {
@@ -623,6 +631,13 @@ section {
 
 .post-entry-2 {
   margin-bottom: 30px;
+  border: 2px solid rebeccapurple;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-entry-2 > div {
+  border: 2px solid red;
 }
 
 .post-entry-2 .post-meta {
@@ -647,13 +662,17 @@ section {
 }
 
 @media (max-width: 960px) {
+
+  .post-entry-2 {
+    flex-direction: column-reverse;
+  }
   .post-entry-2 .thumbnail {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
 }
 
-.post-entry-2.half .thumbnail {
+/* .post-entry-2.half .thumbnail {
   flex: 0 0 50%;
 }
 
@@ -673,7 +692,7 @@ section {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
-}
+} */
 
 .img-bg {
   height: 500px;
