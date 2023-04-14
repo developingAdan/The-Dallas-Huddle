@@ -5,6 +5,15 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+.search_thing {
+  display: none;
+}
+
+* {
+  border: none !important;
+}
+
 :root {
   scroll-behavior: smooth;
 }
@@ -261,7 +270,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    /* color: var(--color-default); */
+    color: var(--color-default);
   }
 
   .navbar .getstarted,
@@ -407,6 +416,12 @@ section {
   .navbar li > a {
     color: var(--color-primary);
   }
+
+  .nav-links {
+    display: none;
+  }
+
+  
   
 
   .navbar .dropdown ul,
@@ -463,6 +478,14 @@ section {
   .mobile-nav-active .navbar>ul {
     display: block;
   }
+}
+
+/* @media (max-width: 950px) {
+
+} */
+
+.about-me-images {
+  border: 2px solid red;
 }
 
 /*--------------------------------------------------------------
