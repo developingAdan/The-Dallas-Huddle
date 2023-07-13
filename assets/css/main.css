@@ -12,11 +12,22 @@
 
 * {
   border: none !important;
+  outline: none !important;
 }
 
 :root {
   scroll-behavior: smooth;
 }
+
+* img {
+  /* outline: 2px solid pink; */
+}
+
+.img-fluid {
+  outline: 2px solid purple;
+  border-radius: 8px;
+}
+
 
 body {
   color: rgba(var(--color-primary-rgb), 1);
@@ -764,7 +775,7 @@ section {
 
 .my-4 {
   border: 2px solid green;
-  width: inherit;
+  /* width: %; */
 }
 
 .custom-swiper-button-next,
@@ -858,8 +869,9 @@ section {
 .post-content figure {
   position: relative;
   left: 52%;
-  min-width: 990px;
+  /* min-width: auto; */
   transform: translateX(-50%);
+  /* outline: 2px solid red; */
 }
 
 @media (max-width: 1255px) {
@@ -876,7 +888,7 @@ section {
     min-width: auto;
     left: auto !important;
     transform: none;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 }
 
@@ -1029,9 +1041,6 @@ section {
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
-.comment {
-  /* Font not working in <textarea> for this version of bs */
-}
 
 .comment .avatar {
   position: relative;
