@@ -146,3 +146,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// Get references to the search input and form
+const searchInput = document.getElementById("searchInput");
+const searchForm = document.querySelector(".search-form");
+
+// Add a submit event listener to the search form
+searchForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the form from submitting
+
+  const searchTerm = searchInput.value.toLowerCase();
+  // Replace this with your own logic to filter/search your blog content.
+  // For demonstration purposes, we'll just display an alert.
+  // alert(`You searched for: ${searchTerm}`);
+  document.getElementById("searchResults").textContent = `Search Results for: ${searchQuery}`;
+
+});
+
+function getSearchQuery() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("q") || "";
+}
+
+// Function to display search results (replace with your logic)
+function displaySearchResults() {
+  const searchQuery = getSearchQuery();
+  // You can use the searchQuery to filter and display results
+  // Replace this with your own logic to fetch and display results.
+
+  // For demonstration purposes, let's display the query.
+  document.getElementById("searchResults").textContent = `Search Results for: ${searchQuery}`;
+}
+
+// Call the function to display search results when the page loads
+window.addEventListener("load", displaySearchResults);

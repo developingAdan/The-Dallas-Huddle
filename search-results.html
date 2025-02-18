@@ -508,6 +508,11 @@
 
   </footer>
 
+  <h1>Search Results</h1>
+  <div id="searchResults">
+    <!-- Search results will be displayed here -->
+  </div>
+
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -521,5 +526,25 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+<script>
+  function getSearchQuery() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("q") || "";
+  }
+
+  // Function to display search results (replace with your logic)
+  function displaySearchResults() {
+    const searchQuery = getSearchQuery();
+    // You can use the searchQuery to filter and display results
+    // Replace this with your own logic to fetch and display results.
+
+    // For demonstration purposes, let's display the query.
+    document.getElementById("searchResults").textContent = `Search Results for: ${searchQuery}`;
+  }
+
+  // Call the function to display search results when the page loads
+  window.addEventListener("load", displaySearchResults);
+</script>
 
 </html>
